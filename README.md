@@ -1,53 +1,69 @@
-# INFO_550_AI_Search_Games_Project
-This project implements and compares AI search algorithms—BFS, DFS, A*, and Bidirectional Search—across three games: Maze Solver, 8-Puzzle, and String Transformation.
-Each game presents unique challenges in state-space search, enabling us to study and evaluate the performance of BFS (Breadth-First Search), DFS (Depth-First Search), A Search*, and Bidirectional Search. The goal is to explore the efficiency of these algorithms in terms of time and space complexity, and to visually represent their behavior through an interactive graphical user interface (GUI).
+INFO_550_AI_Search_Games_Project
 
-The project is designed in response to the professor's feedback, with the following adjustments:
+This project explores AI search algorithms—BFS, DFS, A*, Bidirectional Search, and UCS—across three games: Maze Solver, 8-Puzzle, and String Transformation. Each game offers unique challenges in state-space search, enabling a comparative analysis of these algorithms' efficiency and effectiveness in terms of time and space complexity. An interactive graphical user interface (GUI) with smooth animations visualizes the behavior of the search algorithms, making it intuitive and educational for users.
+Key Features
 
-Random Agents: Added functionality to randomize the initial state of each game to generate different problem configurations.
-Visualization: Smooth animations showing the search process, providing insights into how algorithms explore the state space.
-Performance Metrics: Time taken and space utilized are displayed for each algorithm to help users compare their efficiency.
-Games Implemented:
-Maze Solver
+1.	Heuristic Design
+The project incorporates multiple heuristics for each problem to analyze their impact:
+o	Maze Solver: Manhattan distance and Euclidean distance.
+o	8-Puzzle: Manhattan distance, misplaced tiles, and linear conflict.
+o	String Transformation: Hamming distance and advanced word similarity heuristics.
 
-The maze is generated randomly, with walls and a clear path from the start (green) to the goal (red).
-Users can solve the maze using different algorithms. Each solution is visualized with a step-by-step animation.
-Algorithms Implemented: BFS, DFS, A*, and Bidirectional Search.
-8-Puzzle Game
+2.	Algorithm Comparisons
+The project includes UCS for baseline comparisons with A* and Bidirectional A*, showcasing the importance of heuristics in improving search efficiency and optimality.
 
-A classic sliding tile puzzle where the user arranges numbered tiles from 1 to 8 in the correct order by moving the empty space (0).
-Randomized initial states are generated to ensure variability.
-Algorithms Implemented: BFS, DFS, A*, and Bidirectional Search. A warning is displayed when using DFS due to potential long execution times for complex configurations.
-String Transformation Game
+3.	Predictions and Testing
+Predictions are made about the effectiveness of heuristics under varying conditions. For instance:
+o	A* with Manhattan distance is expected to perform best in Maze and 8-Puzzle.
+o	Bidirectional Search excels in symmetrical problems like String Transformation.
 
-The objective is to transform a start word (e.g., "cat") into a goal word (e.g., "dog") by changing one letter at a time, ensuring all intermediate transformations are valid words.
-The predefined dictionary ensures that only valid words are used at each step.
-Algorithms Implemented: BFS, DFS, A*, and Bidirectional Search.
-Search Algorithms Implemented:
+4.	Interactive GUI
+o	Randomization: Generates diverse problem configurations for each game.
+o	Smooth Animations: Visualizes node exploration and path reconstruction during the search process.
+o	Performance Metrics: Displays time taken, nodes expanded, and solution paths for each algorithm.
+
+Games Implemented
+
+1. Maze Solver
+•	Randomly generated mazes with walls, start (green), and goal (red) points.
+•	Algorithms: BFS, DFS, A*, Bidirectional Search, and UCS.
+•	Heuristics: Manhattan distance, Euclidean distance.
+
+2. 8-Puzzle
+•	Sliding tile puzzle with randomized solvable configurations.
+•	Algorithms: BFS, DFS, A*, Bidirectional Search, and UCS.
+•	Heuristics: Manhattan distance, misplaced tiles, linear conflict.
+•	Warning: DFS may take significantly longer for complex configurations.
+
+3. String Transformation
+•	Transform a start word into a goal word by changing one letter at a time, ensuring all intermediate transformations are valid words.
+•	Algorithms: BFS, DFS, A*, Bidirectional Search, and UCS.
+•	Heuristics: Hamming distance, advanced word similarity measures.
+
+Search Algorithms
+
 Breadth-First Search (BFS)
+•	Explores nodes level by level, ensuring the shortest path to the goal.
+•	Memory-intensive but guarantees optimality.
 
-Explores nodes level by level, ensuring the shortest path to the goal but may require a lot of memory.
 Depth-First Search (DFS)
+•	Explores as far as possible along one branch before backtracking.
+•	May be inefficient for deeper states and large state spaces.
 
-Explores as far as possible along one branch before backtracking. It may be inefficient for deeper states, especially in large state spaces like 8-puzzle.
-Warning: DFS might take a long time to find solutions, particularly in complex puzzles.
-A Search*
+A* Search
+•	Combines path cost and heuristic to guide the search.
+•	Efficient and guarantees optimality with admissible heuristics.
 
-Uses a heuristic function to guide the search, making it more efficient than BFS or DFS.
-Heuristic Example: Manhattan distance is used in the 8-puzzle to estimate the distance to the goal.
 Bidirectional Search
+•	Runs two searches simultaneously from the start and goal states, meeting in the middle.
+•	Reduces the search space significantly in many scenarios.
 
-Runs two searches simultaneously from the start and goal states, meeting in the middle. This often improves efficiency compared to traditional single-direction searches.
-User Interaction and Features:
-Randomize Functionality: Each game provides a randomization feature to generate different problem instances.
-Visualization of Search Process: Smooth animations display the state changes during the search process.
-Performance Metrics Display: Each run shows the time taken and nodes expanded, allowing for a comparative study of algorithms.
-Interactive GUI: The GUI, built using Tkinter, provides easy-to-use buttons to switch between games, trigger solutions, and choose algorithms.
-Algorithm Comparison: The project allows users to explore the trade-offs between algorithms and understand which one performs best in different contexts.
-Objective and Learning Outcome:
-The main objective of this project is to provide hands-on experience with various search algorithms by applying them to real-world-like problem spaces. The interactive visualization and performance metrics empower users to understand the strengths and limitations of each algorithm in different search scenarios. Users will learn how state-space search works, how heuristics guide A* search, and how algorithms behave differently across maze solving, string transformations, and sliding tile puzzles.
-"# INFO_550_AI_PROJECT" 
-<<<<<<< HEAD
-"# INFO_550_AI_PROJECT" 
-=======
->>>>>>> 1b30d0532331cdf25164c0fb9b52c825e8e0f404
+Uniform Cost Search (UCS)
+•	Similar to A* but does not include heuristics.
+•	Serves as a baseline to evaluate the impact of heuristics.
+
+Learning Outcomes
+•	Understand state-space search through interactive visualizations.
+•	Analyze the trade-offs between algorithms and their performance in different problem domains.
+•	Explore the role of heuristics in improving search strategies.
+•	Evaluate the strengths and weaknesses of Bidirectional Search in both spatial and non-spatial problems.
