@@ -4,22 +4,34 @@ This project explores AI search algorithms—BFS, DFS, A*, Bidirectional Search,
 Key Features
 
 1.	Heuristic Design
+
 The project incorporates multiple heuristics for each problem to analyze their impact:
+
 o	Maze Solver: Manhattan distance and Euclidean distance.
+
 o	8-Puzzle: Manhattan distance, misplaced tiles, and linear conflict.
+
 o	String Transformation: Hamming distance and advanced word similarity heuristics.
 
 2.	Algorithm Comparisons
+
 The project includes UCS for baseline comparisons with A* and Bidirectional A*, showcasing the importance of heuristics in improving search efficiency and optimality.
 
 3.	Predictions and Testing
+
 Predictions are made about the effectiveness of heuristics under varying conditions. For instance:
+
 o	A* with Manhattan distance is expected to perform best in Maze and 8-Puzzle.
+
 o	Bidirectional Search excels in symmetrical problems like String Transformation.
 
+
 4.	Interactive GUI
+
 o	Randomization: Generates diverse problem configurations for each game.
+
 o	Smooth Animations: Visualizes node exploration and path reconstruction during the search process.
+
 o	Performance Metrics: Displays time taken, nodes expanded, and solution paths for each algorithm.
 
 Games Implemented
