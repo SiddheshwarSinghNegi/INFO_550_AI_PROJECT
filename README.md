@@ -1,10 +1,10 @@
 INFO_550_AI_Search_Games_Project
 
 This project explores AI search algorithms—BFS, DFS, A*, Bidirectional Search, and UCS—across three games: Maze Solver, 8-Puzzle, and String Transformation. Each game offers unique challenges in state-space search, enabling a comparative analysis of these algorithms' efficiency and effectiveness in terms of time and space complexity. An interactive graphical user interface (GUI) with smooth animations visualizes the behavior of the search algorithms, making it intuitive and educational for users.
+
 Key Features
 
     1.	Heuristic Design
-
         The project incorporates multiple heuristics for each problem to analyze their impact:
 
         o	Maze Solver: Manhattan distance and Euclidean distance.
@@ -14,11 +14,9 @@ Key Features
         o	String Transformation: Hamming distance and advanced word similarity heuristics.
 
     2.	Algorithm Comparisons
-
         The project includes UCS for baseline comparisons with A* and Bidirectional A*, showcasing the importance of heuristics in improving search efficiency and optimality.
 
     3.	Predictions and Testing
-
         Predictions are made about the effectiveness of heuristics under varying conditions. For instance:
 
         o	A* with Manhattan distance is expected to perform best in Maze and 8-Puzzle.
@@ -39,48 +37,19 @@ Games Implemented
     •	Randomly generated mazes with walls, start (green), and goal (red) points.
     •	Algorithms: BFS, DFS, A*, Bidirectional Search, and UCS.
     •	Heuristics: Manhattan distance, Euclidean distance.
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 56247f71ddf20b95a60230c7fc78ab654383ffcd
     2. 8-Puzzle
     •	Sliding tile puzzle with randomized solvable configurations.
     •	Algorithms: BFS, DFS, A*, Bidirectional Search, and UCS.
     •	Heuristics: Manhattan distance, misplaced tiles, linear conflict.
     •	Warning: DFS may take significantly longer for complex configurations.
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 56247f71ddf20b95a60230c7fc78ab654383ffcd
     3. String Transformation
     •	Transform a start word into a goal word by changing one letter at a time, ensuring all intermediate transformations are valid words.
     •	Algorithms: BFS, DFS, A*, Bidirectional Search, and UCS.
     •	Heuristics: Hamming distance, advanced word similarity measures.
-<<<<<<< HEAD
 
 Search Algorithms
-
-    Breadth-First Search (BFS)
-    •	Explores nodes level by level, ensuring the shortest path to the goal.
-    •	Memory-intensive but guarantees optimality.
-
-    Depth-First Search (DFS)
-    •	Explores as far as possible along one branch before backtracking.
-    •	May be inefficient for deeper states and large state spaces.
-
-    A* Search
-    •	Combines path cost and heuristic to guide the search.
-    •	Efficient and guarantees optimality with admissible heuristics.
-
-    Bidirectional Search
-    •	Runs two searches simultaneously from the start and goal states, meeting in the middle.
-    •	Reduces the search space significantly in many scenarios.
-
-=======
-    
-    Search Algorithms
     
     Breadth-First Search (BFS)
     •	Explores nodes level by level, ensuring the shortest path to the goal.
@@ -98,16 +67,12 @@ Search Algorithms
     •	Runs two searches simultaneously from the start and goal states, meeting in the middle.
     •	Reduces the search space significantly in many scenarios.
     
->>>>>>> 56247f71ddf20b95a60230c7fc78ab654383ffcd
     Uniform Cost Search (UCS)
     •	Similar to A* but does not include heuristics.
     •	Serves as a baseline to evaluate the impact of heuristics.
 
 Learning Outcomes
-<<<<<<< HEAD
-=======
 
->>>>>>> 56247f71ddf20b95a60230c7fc78ab654383ffcd
     •	Understand state-space search through interactive visualizations.
     •	Analyze the trade-offs between algorithms and their performance in different problem domains.
     •	Explore the role of heuristics in improving search strategies.
