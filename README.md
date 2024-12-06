@@ -47,4 +47,7 @@ Algorithm Comparison: The project allows users to explore the trade-offs between
 Objective and Learning Outcome:
 The main objective of this project is to provide hands-on experience with various search algorithms by applying them to real-world-like problem spaces. The interactive visualization and performance metrics empower users to understand the strengths and limitations of each algorithm in different search scenarios. Users will learn how state-space search works, how heuristics guide A* search, and how algorithms behave differently across maze solving, string transformations, and sliding tile puzzles.
 "# INFO_550_AI_PROJECT" 
+<<<<<<< HEAD
 "# INFO_550_AI_PROJECT" 
+=======
+>>>>>>> 1b30d0532331cdf25164c0fb9b52c825e8e0f404
