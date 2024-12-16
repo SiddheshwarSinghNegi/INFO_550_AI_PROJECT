@@ -58,9 +58,9 @@ Setup Instructions
 
 1.	Clone the Repository:
    
-git clone https://github.com/SiddheshwarSinghNegi/INFO_550_AI_PROJECT.git
-
-cd INFO_550_AI_PROJECT
+    git clone https://github.com/SiddheshwarSinghNegi/INFO_550_AI_PROJECT.git
+    
+    cd INFO_550_AI_PROJECT
 
 3.	Dependencies:
    
