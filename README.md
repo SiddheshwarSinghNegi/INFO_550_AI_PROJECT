@@ -1,79 +1,104 @@
-INFO_550_AI_Search_Games_Project
+AI Search Problem Solver
 
-This project explores AI search algorithms—BFS, DFS, A*, Bidirectional Search, and UCS—across three games: Maze Solver, 8-Puzzle, and String Transformation. Each game offers unique challenges in state-space search, enabling a comparative analysis of these algorithms' efficiency and effectiveness in terms of time and space complexity. An interactive graphical user interface (GUI) with smooth animations visualizes the behavior of the search algorithms, making it intuitive and educational for users.
+Introduction
 
-Key Features
+The AI Search Problem Solver is a comprehensive project that explores three distinct problem domains: maze solving, string transformation, and the 8-puzzle problem. It implements and compares various search algorithms, including Depth-First Search (DFS), Breadth-First Search (BFS), Uniform Cost Search (UCS), A* (with Manhattan and Euclidean heuristics), and Bidirectional Search. The project evaluates these algorithms' performance in terms of execution time, memory usage, and the number of nodes expanded, offering insights into their efficiency and applicability to different problem types.
+________________________________________
 
-    1.	Heuristic Design
-        The project incorporates multiple heuristics for each problem to analyze their impact:
+Features
 
-        o	Maze Solver: Manhattan distance and Euclidean distance.
+•	Algorithms Implemented:
 
-        o	8-Puzzle: Manhattan distance, misplaced tiles, and linear conflict.
-
-        o	String Transformation: Hamming distance and advanced word similarity heuristics.
-
-    2.	Algorithm Comparisons
-        The project includes UCS for baseline comparisons with A* and Bidirectional A*, showcasing the importance of heuristics in improving search efficiency and optimality.
-
-    3.	Predictions and Testing
-        Predictions are made about the effectiveness of heuristics under varying conditions. For instance:
-
-        o	A* with Manhattan distance is expected to perform best in Maze and 8-Puzzle.
-
-        o	Bidirectional Search excels in symmetrical problems like String Transformation.
-
-    4.	Interactive GUI
-
-        o	Randomization: Generates diverse problem configurations for each game.
-
-        o	Smooth Animations: Visualizes node exploration and path reconstruction during the search process.
-
-        o	Performance Metrics: Displays time taken, nodes expanded, and solution paths for each algorithm.
-
-Games Implemented
-
-    1. Maze Solver
-    •	Randomly generated mazes with walls, start (green), and goal (red) points.
-    •	Algorithms: BFS, DFS, A*, Bidirectional Search, and UCS.
-    •	Heuristics: Manhattan distance, Euclidean distance.
-
-    2. 8-Puzzle
-    •	Sliding tile puzzle with randomized solvable configurations.
-    •	Algorithms: BFS, DFS, A*, Bidirectional Search, and UCS.
-    •	Heuristics: Manhattan distance, misplaced tiles, linear conflict.
-    •	Warning: DFS may take significantly longer for complex configurations.
-
-    3. String Transformation
-    •	Transform a start word into a goal word by changing one letter at a time, ensuring all intermediate transformations are valid words.
-    •	Algorithms: BFS, DFS, A*, Bidirectional Search, and UCS.
-    •	Heuristics: Hamming distance, advanced word similarity measures.
-
-Search Algorithms
+    o	Depth-First Search (DFS)
     
-    Breadth-First Search (BFS)
-    •	Explores nodes level by level, ensuring the shortest path to the goal.
-    •	Memory-intensive but guarantees optimality.
+    o	Breadth-First Search (BFS)
     
-    Depth-First Search (DFS)
-    •	Explores as far as possible along one branch before backtracking.
-    •	May be inefficient for deeper states and large state spaces.
+    o	Uniform Cost Search (UCS)
     
-    A* Search
-    •	Combines path cost and heuristic to guide the search.
-    •	Efficient and guarantees optimality with admissible heuristics.
+    o	A* (Manhattan Heuristic & Euclidean Heuristic)
     
-    Bidirectional Search
-    •	Runs two searches simultaneously from the start and goal states, meeting in the middle.
-    •	Reduces the search space significantly in many scenarios.
-    
-    Uniform Cost Search (UCS)
-    •	Similar to A* but does not include heuristics.
-    •	Serves as a baseline to evaluate the impact of heuristics.
+    o	Bidirectional Search
 
-Learning Outcomes
+•	Problems Solved:
 
-    •	Understand state-space search through interactive visualizations.
-    •	Analyze the trade-offs between algorithms and their performance in different problem domains.
-    •	Explore the role of heuristics in improving search strategies.
-    •	Evaluate the strengths and weaknesses of Bidirectional Search in both spatial and non-spatial problems.
+1.	Maze Solving Problem: Navigate from the top-left to the bottom-right corner of a maze.
+2.	String Transformation Problem: Transform one word into another by changing one letter at a time.
+3.	8-Puzzle Problem: Arrange tiles in a 3x3 grid to match a specified goal state.
+
+•	Visualization:
+
+    o	Step-by-step animations for each algorithm’s search process.
+    
+    o	Detailed GUI built with Tkinter for easy interaction.
+________________________________________
+
+Heuristics Used in A*
+
+•	Manhattan Heuristic:
+
+    o	Sum of absolute differences between the current and goal positions.
+    
+    o	Best suited for grid-based problems like mazes and sliding puzzles.
+
+•	Euclidean Heuristic:
+
+    o	Straight-line distance to the goal.
+    
+    o	Suitable for problems where diagonal movements are allowed.
+________________________________________
+
+Key Findings
+
+1.	A* (with Manhattan Heuristic) consistently outperformed other algorithms in terms of efficiency and memory usage.
+2.	Bidirectional Search reduced search depth, especially in symmetrical problems like maze solving, but struggled with complex branching in the 8-puzzle problem.
+3.	UCS explored significantly more nodes compared to heuristic-driven algorithms like A*, highlighting the importance of domain-specific heuristics.
+________________________________________
+
+Setup Instructions
+
+1.	Clone the Repository:
+   
+git clone https://github.com/SiddheshwarSinghNegi/INFO_550_AI_PROJECT.git
+
+cd INFO_550_AI_PROJECT
+
+3.	Dependencies:
+   
+    o	Python 3.x
+    
+    o	Jupyter Notebook
+    
+    o	NumPy
+    
+    o	Tkinter (Pre-installed with Python)
+
+5.	Run the Project:
+   
+    o	Open the desired .ipynb file (e.g., Maze Solver.ipynb, Puzzle App.ipynb, or String Transformer.ipynb) in Jupyter Notebook or JupyterLab.
+    o	Run the notebook cells to execute the selected game and algorithm.
+________________________________________
+
+Future Enhancements
+
+1.	Extend the 8-Puzzle to larger configurations (e.g., 15-Puzzle) for scalability testing.
+2.	Develop advanced heuristics for the String Transformation Problem.
+3.	Conduct scalability analyses under varying problem complexities.
+________________________________________
+
+Repository Contents
+
+•	Maze Solver.ipynb: Implementation of the Maze Solving Problem.
+
+•	Puzzle App.ipynb: Implementation of the 8-Puzzle Problem.
+
+•	String Transformer.ipynb: Implementation of the String Transformation Problem.
+
+•	README.md: Project documentation.
+________________________________________
+
+Author
+
+Siddheshwar Singh Negi
+
+Master’s Student, College of Information Science, University of Arizona
+
